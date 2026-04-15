@@ -6,12 +6,12 @@
 ---
 
 ### 🛒 Cart Page
-![Cart](./Images/cart.png)
+![Cart](./Images/Cart.png)
 
 ---
 
 ### 🔐 Login Page
-![Login](./Images/login.png)
+![Login](./Images/Login.png)
 
 ---
 
