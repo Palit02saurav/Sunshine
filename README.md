@@ -6,7 +6,7 @@
 ---
 
 ### 🛒 Cart Page
-![Cart](./Images/Cart.png)
+![Cart](./Images/cart.png)
 
 ---
 
@@ -16,4 +16,4 @@
 ---
 
 ### 📦 Product Page
-![Product](./Images/product.png)
+![Product](./Images/products.png)
