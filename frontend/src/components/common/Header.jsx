@@ -66,6 +66,11 @@ const Header = () => {
                       <Link className="nav-link" to="/cart">Cart</Link>
                     </li>
 
+                    {/* ✅ Checkout moved here */}
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/checkout">Checkout</Link>
+                    </li>
+
                     {isLoggedIn ? (
                       <>
                         <li className="nav-item">

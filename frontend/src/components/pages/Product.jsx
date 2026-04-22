@@ -44,20 +44,22 @@ const Product = () => {
   const totalPrice = priceList[fruit] * qty;
 
   const handleCheckout = () => {
-    addToCart({
-      id: idMap[fruit],
-      name: fruit,
-      price: priceList[fruit],
-      qty: qty,
-      image: imageMap[fruit],
-    });
-
-    navigate("/cart");
+  const productData = {
+    id: idMap[fruit],
+    name: fruit,
+    price: priceList[fruit],
+    qty: qty,
+    image: imageMap[fruit],
   };
 
-  const handleBuyNow = (product) => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
+  addToCart(productData);
 
+  navigate("/checkout", { state: productData });
+};
+
+
+  const handleBuyNow = (product) => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn")
     if (isLoggedIn) {
       addToCart(product);
       navigate("/cart");
@@ -65,6 +67,9 @@ const Product = () => {
       navigate("/login");
     }
   };
+
+
+
 
   return (
     <>
@@ -141,11 +146,15 @@ const Product = () => {
                 <p>Neque porro quisquam est...</p>
                 <Add_Cart_Button product={{ id: 1, name: "Mangoes", price: 100, image: pro1 }} />
                 <div style={{ height: "10px" }}></div>
+
+
                 <button className="read_more" onClick={() =>
                   handleBuyNow({ id: 1, name: "Mangoes", price: 100, image: pro1 })
                 }>
                   Buy Now
                 </button>
+
+
               </div>
             </div>
 

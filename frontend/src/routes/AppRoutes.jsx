@@ -9,6 +9,7 @@ import Product from "../components/pages/Product";
 import Cart from "../components/pages/Cart";
 import Login from "../components/Login Signup/Login";
 import Signup from "../components/Login Signup/Signup";
+import Checkout from "../components/common/Checkout";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );

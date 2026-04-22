@@ -1,6 +1,7 @@
   import React, { useState } from "react";
   import Header from "../common/Header";
   import Footer from "../common/Footer";
+  import axios from "axios";
 
   const Contact = () => {
     const [form, setForm] = useState({
@@ -30,23 +31,36 @@
 
 
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-      const { name, phone, email, message } = form;
 
-      if (!name || !phone || !email || !message) {
-        alert("All fields are required!");
-        return;
-      }
+  const { name, phone, email, message } = form;
 
-      if (phone.length !== 10) {
-        alert("Phone number must be exactly 10 digits!");
-        return;
-      }
 
-      alert("Form submitted successfully!");
-    };
+  if (!name || !phone || !email || !message) {
+    alert("All fields are required!");
+    return;
+  }
+  
+
+  if (phone.length !== 10) {
+    alert("Phone number must be exactly 10 digits!");
+    return;
+  }
+
+  try {
+    const res = await axios.post(
+      "http://localhost:3000/contact",
+      form
+    );
+
+    alert(res.data.message);
+
+  } catch (err) {
+    alert("Server error");
+  }
+};
 
 
 

@@ -11,6 +11,9 @@ import pro4 from "../../assets/images/pro4.png";
 const Cart = () => {
   const { cart, increaseQty, decreaseQty, addToCart } = useContext(CartContext);
 
+
+
+
   const [showForm, setShowForm] = useState(false);
   const [address, setAddress] = useState({
     name: "",
@@ -19,9 +22,15 @@ const Cart = () => {
     pincode: "",
   });
 
+
+
+
   const totalAmount = cart.reduce((total, item) => {
     return total + item.price * item.qty;
   }, 0);
+
+
+
 
   const recommendations = [
     { id: 1, name: "Mangoes", price: 100, image: pro1 },
@@ -30,9 +39,14 @@ const Cart = () => {
     { id: 4, name: "Pineapple", price: 150, image: pro4 },
   ];
 
+
+
+
   const handleChange = (e) => {
     setAddress({ ...address, [e.target.name]: e.target.value });
   };
+
+
 
   const handleAddressSubmit = (e) => {
     e.preventDefault();
@@ -43,6 +57,9 @@ const Cart = () => {
   };
 
   return (
+
+
+    
     <>
       <Header />
 

@@ -968,6 +968,19 @@ ul.link_menu li a:hover {
   background: #ff4d6d;
 }
 
+.checkout-btn {
+    margin-left: 15px;
+    background-color: yellow;
+    color: black !important;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.checkout-btn:hover {
+    background-color: orange;
+    color: white !important;
+}
 .qty_value {
   min-width: 25px;
   text-align: center;
